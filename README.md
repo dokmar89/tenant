@@ -1,48 +1,48 @@
-# Tenant and occupancy dashboard
+# Přehled nájemců a obsazenosti
 
-A browser-based dashboard for tenant records, room/parking allocation and rent summaries.
+Aplikace v prohlížeči pro evidenci nájemců, přiřazení místností a parkování a souhrny nájemného.
 
-**Status:** Local prototype with browser storage; no multi-user server or production access control is established.
+**Stav:** Lokální prototyp s úložištěm prohlížeče; sdílený server ani produkční řízení přístupu nejsou doložené.
 
-## Scope
+## Co projekt obsahuje
 
-- Add, edit and remove tenant records through modal forms.
-- Calculate occupied area, parking costs and rent summaries.
-- CSV export for tenant and occupancy views.
-- Persist tenant state with localStorage.
+- Přidávání, úpravy a odstraňování nájemců pomocí formulářů.
+- Výpočty obsazené plochy, parkování a nájemného.
+- Export nájemců a obsazenosti do CSV.
+- Ukládání záznamů do localStorage.
 
-## Technology
+## Technologie
 
 React, TypeScript, Vite.
 
-## Architecture and source map
+## Architektura a struktura
 
-- `App.tsx` — state, calculations, dashboards and exports
-- `components/TenantModal.tsx` — record editor
-- `types.ts` — data types
-- `constants.ts` — initial room, parking and tenant data
+- `App.tsx` — stav aplikace, výpočty, přehledy a exporty
+- `components/TenantModal.tsx` — editor záznamu
+- `types.ts` — datové typy
+- `constants.ts` — výchozí údaje místností, parkování a nájemců
 
-## Local development
+## Lokální vývoj
 
-Requires Node.js and npm. From the repository root:
+Potřebujete Node.js a npm. V kořenové složce repozitáře spusťte:
 
 ```sh
 npm install
 npm run dev
 ```
 
-Build command declared by this checkout: `npm run build`.
+Příkaz pro sestavení uvedený v projektu: `npm run build`.
 
-These are the repository scripts, not a claim of a passing build. Dependency installation, build and live integrations were not executed during the documentation review.
+Jde o příkazy deklarované v repozitáři, nikoli o potvrzení úspěšného sestavení. Instalace závislostí, sestavení ani napojení na živé služby nebyly při úpravě dokumentace spuštěny.
 
-## Configuration and limitations
+## Konfigurace a omezení
 
-Data is stored in the browser, not in a shared database. Existing initial data is not reproduced here; replace it with synthetic fixtures before any public demonstration. Validate storage initialization and backup/export behavior before relying on it for real records.
+Data se ukládají do prohlížeče, nikoli do sdílené databáze. Původní výchozí údaje zde nejsou reprodukovány; před veřejnou ukázkou je nahraďte fiktivními. Před prací s reálnými záznamy ověřte inicializaci úložiště, zálohování a exporty.
 
-## Portfolio relevance
+## Přínos pro portfolio
 
-Demonstrates practical administrative automation, data modelling and CSV reporting.
+Ukazuje praktickou administrativní automatizaci, datové modelování a export přehledů.
 
-## Documentation next steps
+## Co doplnit do dokumentace
 
-Capture screenshots using synthetic data, document a reproducible test run, and record which integrations have been verified. Keep credentials and deployment-specific configuration outside version control.
+Snímky obrazovky s fiktivními daty, opakovatelný postup ověření a přehled skutečně otestovaných integrací. Přihlašovací údaje a konfigurace konkrétního nasazení patří mimo Git.
